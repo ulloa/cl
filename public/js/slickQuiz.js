@@ -28,9 +28,9 @@
                 nameTemplateText:  '<span>Quiz: </span>%name',
                 skipStartButton: false,
                 numberOfQuestions: null,
-                randomSortQuestions: false,
-                randomSortAnswers: false,
-                preventUnanswered: false,
+                randomSortQuestions: true,
+                randomSortAnswers: true,
+                preventUnanswered: true,
                 perQuestionResponseMessaging: true,
                 completionResponseMessaging: false,
                 displayQuestionCount: true,   // Deprecate?
@@ -398,6 +398,7 @@
             },
 
             // Validates the response selection(s), displays explanations & next question button
+//ajx
             checkAnswer: function(checkButton, options) {
             	var key, keyNotch, kN;
             	key = internal.method.getKey (2); // how many notches == how many jQ animations you will run
@@ -649,6 +650,7 @@
             $(_element + ' ' + _checkAnswerBtn).on('click', function(e) {
                 e.preventDefault();
                 plugin.method.checkAnswer(this, {callback: plugin.config.animationCallbacks.checkAnswer});
+
             });
 
             // Bind "back" buttons
@@ -661,6 +663,20 @@
             $(_element + ' ' + _nextQuestionBtn).on('click', function(e) {
                 e.preventDefault();
                 plugin.method.nextQuestion(this, {callback: plugin.config.animationCallbacks.nextQuestion});
+            });
+            $(_element + ' ' + _nextQuestionBtn).on('click', function() {
+/*								$.ajax({
+										url: "/samuel:creative@kahana.mongohq.com:10078app27460537",
+//										url: "./start",
+										type: "POST",
+										data: JSON.stringify( selectedAnswers ),
+										success: function(d),{
+										},
+										error: function(jqXHR, textStatus, errorThrown) {
+												//Something bad happened
+										}
+//										contentType: "application/json"
+								});*/
             });
 
             // Accessibility (WAI-ARIA).

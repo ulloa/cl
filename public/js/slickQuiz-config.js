@@ -5,22 +5,22 @@
 var quizJSON = {
     "info": {
         "name":    "Political quiz!",
-        "main":    "<p>What do you believe?</p>",
-        "results": "<h5>Learn More</h5><p>Etiam scelerisque, nunc ac egestas consequat, odio nibh euismod nulla, eget auctor orci nibh vel nisi. Aliquam erat volutpat. Mauris vel neque sit amet nunc gravida congue sed sit amet purus.</p>",
+        "main":    "<p>If you were president what would you do?</p>",
+        "results": "<h5>Learn More Connect with us</h5><p>FacebookPage</p>",
         "level1":  "Libertarian",
-        "level2":  "Fascist",
+        "level2":  "Democrat",
         "level3":  "Socialist",
-        "level4":  "Republic",
-        "level5":  "Stay in school, kid..." // no comma here
+        "level4":  "Repubican",
+        "level5":  "Clueless" // no comma here
     },
     "questions": [
         { // Question 1 - Multiple Choice, Single True Answer
-            "q": "What number is the letter A in the English alphabet?",
+            "q": "40% of your orange crops were inected with a pplague causing losses and shortages in the market. What do you do?",
             "a": [
-                {"option": "8",      "correct": false},
-                {"option": "14",     "correct": false},
-                {"option": "1",      "correct": true},
-                {"option": "23",     "correct": false} // no comma here
+                {"option": "Import oranges. Foreigners could help",      "correct": false},
+                {"option": "The plague will no last forever. Import with quota restrictions",     "correct": false},
+                {"option": "Find the culprit that brouth this plague to your country",      "correct": true},
+                {"option": "Nothing. Oranges aren't that important",     "correct": false} // no comma here
             ],
             "correct": "<p><span>That's right!</span> The letter A is the first letter in the alphabet!</p>",
             "incorrect": "<p><span>Uhh no.</span> It's the first letter of the alphabet. Did you actually <em>go</em> to kindergarden?</p>" // no comma here
@@ -34,7 +34,7 @@ var quizJSON = {
                 {"option": "Eggs, fruit, toast, and milk", "correct": true} // no comma here
             ],
             "select_any": true,
-            "correct": "<p><span>Nice!</span> Your cholestoral level is probably doing alright.</p>",
+            "correct": "<p><span>Nice!</span> Your cholesterol level is probably doing alright.</p>",
             "incorrect": "<p><span>Hmmm.</span> You might want to reconsider your options.</p>" // no comma here
         },
         { // Question 3 - Multiple Choice, Multiple True Answers, Select All

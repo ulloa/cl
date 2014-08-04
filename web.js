@@ -1,8 +1,20 @@
 require('newrelic');
 var express = require('express');
+var mongoose = require('mongoose');
 var app = express();
 app.use(express.logger());
-//app.use("/public", express.static(__dirname + '/public'));
+
+
+mongoose.connect(process.env.MONGOHQ_URL);
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function () {
+  console.log('Connected to MongoDB');
+});
+app.configure( function() {
+		app.use(express.bodyParser() );
+		app.use(express.static(__dirname + '/public' ) );
+});
 
 var fs = require('fs');
 var htmlfile = "index.html";
@@ -14,16 +26,31 @@ app.get('/', function(request, response) {
     response.send(html);
 //  response.send(fs.readFileSync('index.html').tostring());
 });
-
-
+/*
+app.use('/', function(req, res) {
+		var QuizResult = new Object({
+				id: String,
+				policy: String,
+				q1:  Number,
+				q2: Number,
+				q3: Number,
+				q4: Number,
+				q5: Number,
+				q6: Number,
+				q7: Number,
+				q8: Number,
+				q9: Number,
+				q10: Number
+		});
+		var Quiz =mongoose.model("QuizData", QuizResult);
+		var newQuizTaken = new Quiz
+		newQuizTaken.save()
+});
+*/
 app.use(express.static(__dirname + '/public')); // just added for static files
 app.get('/about', function (req, res)
 {
     res.render('about.html');
-});
-app.get('/events', function (req, res)
-{
-    res.render('events.html');
 });
 app.get('/quiz', function (req, res)
 {
@@ -36,22 +63,6 @@ app.get('/staff', function (req, res)
 app.get('/support', function (req, res)
 {
     res.render('support.html');
-});
-app.get('/research', function (req, res)
-{
-    res.render('research.html');
-});
-app.get('/currentprojects', function (req, res)
-{
-    res.render('currentprojects.html');
-});
-app.get('/publications', function (req, res)
-{
-    res.render('publications.html');
-});
-app.get('/researchbytopic', function (req, res)
-{
-    res.render('researchbytopic.html');
 });
 
 var port = process.env.PORT || 8080;
