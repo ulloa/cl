@@ -1,6 +1,7 @@
 require('newrelic');
 var express = require('express');
 var mongoose = require('mongoose');
+var http = require('http');
 var app = express();
 app.use(express.logger());
 
@@ -28,6 +29,28 @@ app.get('/', function(request, response) {
 });
 /*
 app.use('/', function(req, res) {
+});
+*/
+app.use(express.static(__dirname + '/public')); // just added for static files
+app.post('/postdata', function (req, res)
+{
+		var Movie = new Object({
+				title: String,
+				rating: String,
+				releaseYear: Number
+		});
+		
+		var thor = new Movie({
+				title: 'Thor'
+				, rating: 'PG-13'
+				, releaseYear: '2011'  // Notice the use of a String rather than a Number - Mongoose will automatically convert this for us.
+		});
+
+		thor.save(function(err, thor) {
+				if (err) return console.error(err);
+				console.dir(thor);
+		});		
+
 		var QuizResult = new Object({
 				id: String,
 				policy: String,
@@ -42,12 +65,11 @@ app.use('/', function(req, res) {
 				q9: Number,
 				q10: Number
 		});
-		var Quiz =mongoose.model("QuizData", QuizResult);
-		var newQuizTaken = new Quiz
-		newQuizTaken.save()
+		var Quiz =mongoose.model("11QuizData", QuizResult);
+		var newQuizTaken = new Quiz;
+		newQuizTaken.save();
+		res.send("OK");
 });
-*/
-app.use(express.static(__dirname + '/public')); // just added for static files
 app.get('/about', function (req, res)
 {
     res.render('about.html');

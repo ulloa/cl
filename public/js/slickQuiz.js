@@ -664,10 +664,10 @@
                 e.preventDefault();
                 plugin.method.nextQuestion(this, {callback: plugin.config.animationCallbacks.nextQuestion});
             });
-            $(_element + ' ' + _nextQuestionBtn).on('click', function() {
-/*								$.ajax({
-										url: "/samuel:creative@kahana.mongohq.com:10078app27460537",
-//										url: "./start",
+/*            $(_element + ' ' + _nextQuestionBtn).on('click', function() {
+							$.ajax({
+//										url: "mongodb://samuel:creative@kahana.mongohq.com:10078/app27460537",
+										url: "/postdata",
 										type: "POST",
 										data: JSON.stringify( selectedAnswers ),
 										success: function(d),{
@@ -676,9 +676,9 @@
 												//Something bad happened
 										}
 //										contentType: "application/json"
-								});*/
+								});
             });
-
+*/
             // Accessibility (WAI-ARIA).
             var _qnid = $element.attr('id') + '-name';
             $quizName.attr('id', _qnid);

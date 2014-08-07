@@ -4,9 +4,9 @@
 
 var quizJSON = {
     "info": {
-        "name":    "Political quiz!",
-        "main":    "<p>If you were president what would you do?</p>",
-        "results": "<h5>Learn More Connect with us</h5><p>FacebookPage</p>",
+        "name":    "What would you do as President?",
+        "main":    "",
+        "results": "<p>Learn More Connect with us</h5><p class='para'>FacebookPage</p>",
         "level1":  "Libertarian",
         "level2":  "Democrat",
         "level3":  "Socialist",
