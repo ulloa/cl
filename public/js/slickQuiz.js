@@ -31,8 +31,8 @@
                 randomSortQuestions: true,
                 randomSortAnswers: true,
                 preventUnanswered: true,
-                perQuestionResponseMessaging: true,
-                completionResponseMessaging: false,
+                perQuestionResponseMessaging: false, //takes away fast feedback
+                completionResponseMessaging: true, // 
                 displayQuestionCount: true,   // Deprecate?
                 displayQuestionNumber: true,  // Deprecate?
                 animationCallbacks: { // only for the methods that have jQuery animations offering callback

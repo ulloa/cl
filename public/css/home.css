@@ -132,11 +132,13 @@
     }
 }
 /* Main body and headings */
-html, body{height: 100%;}
+html{height: 100%;}
 body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif, "Open Sans";
     position: relative;
-    height: 100%;
+/*    height: 100%; */
+		height: auto;
+		min-height: 100% !important;
 		padding: 1%;
 }
 .heading, .subheading {
