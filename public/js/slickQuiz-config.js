@@ -15,7 +15,7 @@ var quizJSON = {
     },
     "questions": [
         { // Question 1 - Multiple Choice, Single True Answer
-            "q": "Uh-oh! Your country experienced a steep drop in milk prices last week, and milk producers are lobbying hard for price controls. You forbid stores from selling milk below $1.31 per gallon. Your advisors are confident that their charts and graphs can accurately predict what the market price of milk should really be. If your goal is to have a quality supply of milk at adequate amounts, should you take your adviser's advice and implement price controls?<img class='img-responsive' src='milk.jpg'></img>",
+            "q": "Uh-oh! Your country experienced a steep drop in milk prices last week, and milk producers are lobbying hard for price controls. You forbid stores from selling milk below $1.31 per gallon. Your advisers are confident that their charts and graphs can accurately predict what the market price of milk should really be. If your goal is to have a quality supply of milk at adequate amounts, should you take your adviser's advice and implement price controls?<img class='img-responsive' src='milk.jpg'></img>",
             "a": [
                 {"option": "Yes",      "correct": false},
                 {"option": "No",     "correct": true} // no comma here
