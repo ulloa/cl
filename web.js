@@ -74,6 +74,10 @@ app.get('/about', function (req, res)
 {
     res.render('about.html');
 });
+app.get('/faq', function (req, res)
+{
+    res.render('faq.html');
+});
 app.get('/quiz', function (req, res)
 {
     res.render('quiz.html');

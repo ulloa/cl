@@ -132,7 +132,7 @@
     }
 }
 /* Main body and headings */
-html{height: 100%;}
+html, body {height: 100%;}
 body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif, "Open Sans";
     position: relative;
@@ -302,7 +302,7 @@ div.coinbase {
     display: block;
     color: rgb(250, 250, 250);
     top: 0%;
-    background: url(http://i.imgur.com/bONOi81.jpg) no-repeat center center;
+    background: url('ovaloffice.jpg') no-repeat center center;
 
     /*        webkit-background-size: cover; */
     background-size: cover;

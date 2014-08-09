@@ -16,15 +16,7 @@
   <link rel="stylesheet" href="css/home.css" type="text/css">
   <script src="http://code.angularjs.org/1.2.0-rc.3/angular.min.js"></script>
 </head>
-<body id="slickQuiz">
-	<div id="fb-root"></div>
-	<script>(function(d, s, id) {
-		var js, fjs = d.getElementsByTagName(s)[0];
-		if (d.getElementById(id)) return;
-		js = d.createElement(s); js.id = id;
-		js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
-		fjs.parentNode.insertBefore(js, fjs);
-		}(document, 'script', 'facebook-jssdk'));</script>	
+<body class="slickQuiz" style="height:100%">
 	<nav class="navbar navbar-default navbar-static-top" role="navigation">
 		<div class="navbar-header">
 			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -41,32 +33,15 @@
 				<li class="nav"><a href="/staff">Staff</a></li>
 				<li class="active nav"><a href="/quiz">Quiz</a></li>
 				<li class="nav"><a href="/support">Support</a></li>
+				<li class="nav"><a href="/faq">FAQ</a></li>
 			</ul>
 		</div>
 	</nav>
-	<div class="container">
-		<div class="row">
-			<div class="col-sm-8 col-sm-offset-2">
-				<h1 class="quizName center"><!-- where the quiz name goes --></h1>
-				<div class="quizArea">
-					<div class="quizHeader">
-						<!-- where the quiz main copy goes -->
-
-						<a class="button startQuiz" href="#">Get Started!</a>
-					</div>
-
-					<!-- where the quiz gets built -->
-					
-				</div>
-				<div class="quizResults">
-					<p class="quizScore">You Scored: <span><!-- where the quiz score goes --></span></h3>
-
-					<p class="quizLevel"><strong>Ranking:</strong> <span><!-- where the quiz ranking level goes --></span></h3>
-
-					<div class="quizResultsCopy">
-						<!-- where the quiz result copy goes -->
-					</div>
-				</div>
+	<div class="container" style="height:80%">
+		<div class="panel panel-default" id="panel1">
+			<div class="col-xs-5" id="addtext">
+				<h1 class="heads">Do you have what it takes to be president?</h1>
+				<p class="para"><a href="/quiz">Take a quiz that checks if you can avoid running into the knowledge problem<a></p>
 			</div>
 		</div>
 	</div>
