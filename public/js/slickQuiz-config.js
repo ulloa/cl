@@ -15,7 +15,7 @@ var quizJSON = {
     },
     "questions": [
         { // Question 1 - Multiple Choice, Single True Answer
-            "q": "40% of your orange crops were inected with a plague causing losses and shortages in the market. What do you do?",
+            "q": "40% of your orange crops were inected with a plague causing losses and shortages in the market. What do you do?<img src='logo.jpg'></img>",
             "a": [
                 {"option": "Government takeover of orange industry.",      "correct": false},
                 {"option": "Nothing significant",     "correct": false} // no comma here
@@ -24,7 +24,7 @@ var quizJSON = {
             "incorrect": "<p><span>Sorry</span> Government takeover the orange industry will hurt selected, and likely everyone else through taxes. Not only is it immoral, but the government will not know how many oranges people want and what prices to sell them for if it is a complete take over.</p>" // no comma here
         },
         { // Question 2 - Multiple Choice, Multiple True Answers, Select Any
-            "q": "Your Country experienced a steep drop in milk prices last week. Milk producers are lobbying hard for price controls so that a large part of the industry doesn't collapse. Your top adviser has suggested that you forbid stores from selling milk below $1.31 based on economic models. Would you place a price control on milk?",
+            "q": "Your Country experienced a steep drop in milk prices last week. Milk producers are lobbying hard for price controls so that a large part of the industry doesn't collapse. Your top adviser has suggested that you forbid stores from selling milk below $1.31 based on economic models. Would you place a price control on milk?<img src='milk.jpg'></img>",
             "a": [
                 {"option": "Yes",               "correct": false},
                 {"option": "No",   "correct": true}
